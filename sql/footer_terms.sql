@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS footer_terms (
+  id SERIAL PRIMARY KEY,
+  terms TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Inserir termo padrão
+INSERT INTO footer_terms (terms) 
+VALUES ('Todos os direitos reservados.')
+ON CONFLICT DO NOTHING; 

@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
             )}</p>
           </div>
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
-            <p>Esta mensagem foi enviada através do formulário de contato do site Power Fit.</p>
+            <p>Esta mensagem foi enviada através do formulário de contato do site Ritmoalpha.</p>
           </div>
         </div>
       `,

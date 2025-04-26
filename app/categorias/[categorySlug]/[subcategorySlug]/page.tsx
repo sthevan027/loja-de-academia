@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 interface SubcategoryPageProps {
   params: {
-    categorySlug: string
+    slug: string
     subcategorySlug: string
   }
 }
 
 export default function SubcategoryPage({ params }: SubcategoryPageProps) {
-  const { categorySlug, subcategorySlug } = params
-  const category = categories.find((c) => c.slug === categorySlug)
+  const { slug, subcategorySlug } = params
+  const category = categories.find((c) => c.slug === slug)
   const subcategory = category?.subcategories?.find((s) => s.slug === subcategorySlug)
 
   if (!category || !subcategory) {
@@ -33,7 +33,7 @@ export default function SubcategoryPage({ params }: SubcategoryPageProps) {
           Home
         </Link>{" "}
         &gt;{" "}
-        <Link href={`/categorias/${category.slug}`} className="text-sm text-gray-600 hover:text-red-600">
+        <Link href={`/categorias/${slug}`} className="text-sm text-gray-600 hover:text-red-600">
           {category.name}
         </Link>{" "}
         &gt; <span className="text-sm text-gray-900">{subcategory.name}</span>
@@ -52,7 +52,7 @@ export default function SubcategoryPage({ params }: SubcategoryPageProps) {
                 {category.subcategories?.map((sub) => (
                   <Link
                     key={sub.id}
-                    href={`/categorias/${category.slug}/${sub.slug}`}
+                    href={`/categorias/${slug}/${sub.slug}`}
                     className={`block py-2 ${
                       sub.slug === subcategorySlug ? "text-red-600 font-medium" : "text-gray-600 hover:text-red-600"
                     }`}
@@ -66,7 +66,7 @@ export default function SubcategoryPage({ params }: SubcategoryPageProps) {
         </div>
 
         <div className="md:col-span-3">
-          <ProductGrid category={category.slug} subcategory={subcategory.slug} />
+          <ProductGrid category={slug} subcategory={subcategorySlug} />
         </div>
       </div>
     </div>

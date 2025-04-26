@@ -1,6 +1,6 @@
 // Configurações do PWA
 const pwaConfig = {
-  name: 'Power Fit',
+  name: 'Ritmoalpha',
   shortName: 'PowerFit',
   description: 'Loja de roupas e acessórios fitness',
   themeColor: '#000000',
@@ -56,7 +56,7 @@ const pwaConfig = {
       src: '/screenshots/home.png',
       sizes: '1280x720',
       type: 'image/png',
-      label: 'Página inicial do Power Fit'
+      label: 'Página inicial do Ritmoalpha'
     },
     {
       src: '/screenshots/product.png',

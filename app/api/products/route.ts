@@ -3,36 +3,39 @@ import { query } from "@/lib/db"
 import { categories } from "@/lib/categories"
 
 export async function GET(request: NextRequest) {
-  try {
-    const searchParams = request.nextUrl.searchParams
-    const categorySlug = searchParams.get("category")
-    const subcategorySlug = searchParams.get("subcategory")
+  const { searchParams } = new URL(request.url)
+  const slug = searchParams.get("category")
+  const subcategorySlug = searchParams.get("subcategory")
+  const page = Number(searchParams.get("page")) || 1
+  const limit = Number(searchParams.get("limit")) || 12
+  const offset = (page - 1) * limit
 
-    let sql = `
+  try {
+    let query = `
       SELECT p.*, c.name as category_name, c.slug as category_slug
       FROM products p
       LEFT JOIN categories c ON p.category_id = c.id
       WHERE 1=1
     `
-
     const params: any[] = []
+    const conditions: string[] = []
 
-    if (categorySlug) {
-      const category = categories.find((c) => c.slug === categorySlug)
+    if (slug) {
+      const category = categories.find((c) => c.slug === slug)
       if (category) {
-        sql += ` AND c.slug = $${params.length + 1}`
-        params.push(categorySlug)
+        query += ` AND c.slug = $${params.length + 1}`
+        params.push(slug)
       }
     }
 
     if (subcategorySlug) {
-      sql += ` AND p.subcategory = $${params.length + 1}`
+      query += ` AND p.subcategory = $${params.length + 1}`
       params.push(subcategorySlug)
     }
 
-    sql += ` ORDER BY p.created_at DESC`
+    query += ` ORDER BY p.created_at DESC`
 
-    const result = await query(sql, params)
+    const result = await query(query, params)
     return NextResponse.json(result.rows)
   } catch (error) {
     console.error("Erro ao buscar produtos:", error)

@@ -209,15 +209,15 @@ export function BRMobileFeatures() {
                       <h3 className="font-medium">Lojas próximas:</h3>
                       <ul className="space-y-2">
                         <li className="flex items-center justify-between p-2 bg-gray-100 rounded">
-                          <span>Power Fit Shopping Ibirapuera</span>
+                          <span>Ritmoalpha Shopping Ibirapuera</span>
                           <Badge>1.2km</Badge>
                         </li>
                         <li className="flex items-center justify-between p-2 bg-gray-100 rounded">
-                          <span>Power Fit Shopping Morumbi</span>
+                          <span>Ritmoalpha Shopping Morumbi</span>
                           <Badge>2.5km</Badge>
                         </li>
                         <li className="flex items-center justify-between p-2 bg-gray-100 rounded">
-                          <span>Power Fit Shopping Eldorado</span>
+                          <span>Ritmoalpha Shopping Eldorado</span>
                           <Badge>3.8km</Badge>
                         </li>
                       </ul>

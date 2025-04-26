@@ -12,7 +12,7 @@ import PromoBanner from "@/components/promo-banner"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 export const metadata: Metadata = {
-  title: "Promoções | Power Fit",
+  title: "Promoções | Ritmoalpha",
   description: "Aproveite as melhores ofertas em produtos fitness com descontos imperdíveis",
 }
 

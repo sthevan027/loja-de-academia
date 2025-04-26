@@ -59,7 +59,7 @@ self.addEventListener('push', event => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('Power Fit', options)
+    self.registration.showNotification('Ritmoalpha', options)
   );
 });
 

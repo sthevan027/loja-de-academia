@@ -73,7 +73,7 @@ export default function LoginPage() {
         <div className="relative h-full w-full">
           <Image src="/images/gym-banner.png" alt="Fitness" fill className="object-cover opacity-80" />
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 p-12 text-white">
-            <h1 className="mb-6 text-5xl font-bold">POWER FIT</h1>
+            <h1 className="mb-6 text-5xl font-bold">RITMOALPHA</h1>
             <p className="mb-8 text-center text-xl">Transforme seu corpo, transforme sua vida.</p>
             <div className="h-1 w-20 bg-red-600"></div>
           </div>

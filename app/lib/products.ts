@@ -37,13 +37,13 @@ export async function getProducts(limit = 6): Promise<Product[]> {
   }
 }
 
-export async function getProductsByCategory(categorySlug: string, limit = 12): Promise<Product[]> {
+export async function getProductsByCategory(slug: string, limit = 12): Promise<Product[]> {
   try {
     const products = await sql<Product[]>`
       SELECT p.*, c.name as category_name
       FROM products p
       JOIN categories c ON p.category_id = c.id
-      WHERE c.slug = ${categorySlug}
+      WHERE c.slug = ${slug}
       ORDER BY p.created_at DESC
       LIMIT ${limit}
     `

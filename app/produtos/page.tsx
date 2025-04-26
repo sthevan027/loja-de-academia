@@ -3,9 +3,10 @@ import Link from "next/link"
 import { getProducts } from "@/lib/products"
 import ProductCard from "@/components/product-card"
 import ProductsLoading from "@/components/products-loading"
+import { Metadata } from "next"
 
-export const metadata = {
-  title: "Produtos | Power Fit",
+export const metadata: Metadata = {
+  title: "Produtos | Ritmoalpha",
   description: "Explore nossa coleção de produtos para academia e fitness",
 }
 

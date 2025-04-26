@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Copyright com edição */}
         <div className="text-center text-gray-500 text-xs border-t border-gray-800 pt-4">
           <div className="flex items-center justify-center gap-2">
-            <p>&copy; {currentYear} Power Fit. {terms}</p>
+            <p>&copy; {currentYear} Ritmoalpha. {terms}</p>
             {session && (
               <Button
                 variant="ghost"

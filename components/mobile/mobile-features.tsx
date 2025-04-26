@@ -164,7 +164,7 @@ export function MobileFeatures() {
             <CardHeader>
               <CardTitle>Instalar App</CardTitle>
               <CardDescription>
-                Instale o Power Fit para uma experiência melhor
+                Instale o Ritmoalpha para uma experiência melhor
               </CardDescription>
             </CardHeader>
             <CardContent>

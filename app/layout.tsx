@@ -19,14 +19,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Power Fit - Equipamentos de Academia",
-    template: "%s | Power Fit"
+    default: "Ritmoalpha - Equipamentos de Academia",
+    template: "%s | Ritmoalpha"
   },
   description: "Loja especializada em equipamentos e roupas para academia. Encontre os melhores produtos fitness com os melhores preços.",
   keywords: ["academia", "fitness", "equipamentos", "roupas", "suplementos", "acessórios"],
-  authors: [{ name: "Power Fit" }],
-  creator: "Power Fit",
-  publisher: "Power Fit",
+  authors: [{ name: "Ritmoalpha" }],
+  creator: "Ritmoalpha",
+  publisher: "Ritmoalpha",
   formatDetection: {
     email: false,
     address: false,
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "/",
-    title: "Power Fit - Equipamentos de Academia",
+    title: "Ritmoalpha - Equipamentos de Academia",
     description: "Loja especializada em equipamentos e roupas para academia",
-    siteName: "Power Fit",
+    siteName: "Ritmoalpha",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Power Fit - Equipamentos de Academia",
+    title: "Ritmoalpha - Equipamentos de Academia",
     description: "Loja especializada em equipamentos e roupas para academia",
-    creator: "@powerfit",
+    creator: "@ritmoalpha",
   },
   robots: {
     index: true,
